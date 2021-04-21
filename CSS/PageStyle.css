@@ -1,0 +1,82 @@
+body {
+	background-image: url("../BackGrounds/bg_page.jpg");
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: 'arial';
+	margin: 0;
+	box-sizing: border-box;
+}
+
+
+.MHW-Capa{
+	margin: 50px 0px 20px 5px;
+	text-align:center;
+	
+}
+
+.bg-titles{
+	background-image: url("../BackGrounds/TitleInput.png");
+	width: 618px;
+	height: auto;	
+    margin: 0 auto 30px;
+    box-sizing: border-box;
+	background-repeat: no-repeat;
+	text-align: center;
+	
+}
+
+#check{
+	display: none;
+}
+
+.bg-titles h2{
+	font-size: 150%;
+	margin-top: 13px;
+	text-align: center;
+	padding: 0px 30px 0px ;
+	color: white;
+	letter-spacing: 0.25rem;
+	
+	 
+}
+
+#right_arrow{
+	width: 30px;
+	position:absolute;
+	margin-left: 180px;
+	margin-top: 13px;
+	
+}
+#left_arrow{
+	width: 30px;
+	height: auto;
+	position:absolute;
+	margin-left: -210px;
+	margin-top: 13px;
+	transform: rotateY(180deg);
+	
+}
+
+#LoadScreen{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(82, 73, 73, 0.815);
+	transition: 1s ease-in-out;
+}
+
+#LoadScreen img{
+	width: 256px; 
+	height: 120px;
+
+}
+
+
+

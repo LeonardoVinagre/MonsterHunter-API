@@ -1,0 +1,46 @@
+#all_large_monsters{
+	display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+    
+}
+
+#all_small_monsters{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+
+     
+}
+
+.monster{
+    background-image: url("../BackGrounds/bg_brown.jpg");
+    box-sizing: border-box;
+    width: 130px;
+    height: 150px;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 0px 10px 40px ;
+    text-align: center;
+    letter-spacing: 0.10rem;
+    box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+    text-decoration: none;
+}
+
+.monster .img-container{
+    text-align: center;
+    padding-top: 10px;
+
+     
+}
+
+.monster:hover{
+    border:  solid #938D8E 2px;
+    
+}

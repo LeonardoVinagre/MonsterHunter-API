@@ -1,0 +1,150 @@
+
+html, body{   
+    background-image: url("../BackGrounds/bg_page.jpg");
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+ 
+}
+
+.title{
+    width: 618px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.title{
+    background-image: url("../BackGrounds/TitleInput.png");
+	width: 618px;
+	height: auto;	
+    margin: 20px auto 10px;
+    box-sizing: border-box;
+	background-repeat: no-repeat;
+	justify-content: center;
+}
+.title h2{
+    font-size: 150%;
+	margin-top: 13px;
+	padding: 0px 30px 0px ;
+	color: white;
+	letter-spacing: 0.25rem;
+
+}
+
+
+.left-top{
+    background-image: url("/BackGrounds/fundo.png");
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+    
+}
+.left-botton{
+    background-image: url("/BackGrounds/fundo.png");
+    grid-column-start: 1;
+    grid-column-end: 2;
+    
+}
+.right{
+    background-image: url("/BackGrounds/fundo.png");
+    grid-column-start: 2;
+    grid-column-end:3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    
+}
+
+.container{
+    background-image: url("/BackGrounds/bg_brown.jpg");
+    width: 70%;
+    height: 380px;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 1px 50px rgba(100, 100, 100, 0.5);
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    grid-template-rows: 50% 45%  ;
+    grid-gap: 15px;
+    
+}
+
+/*Image -> Left-top*/
+.left-top{
+    text-align:center;
+    border-radius: 5px;
+}
+#img{
+    max-height: 190px;
+    margin-top: 5px;
+}
+.left-top:hover{
+    box-shadow: 0 1px 5px rgba(100, 100, 100, 0.5);
+}
+
+/*----------------------------*/
+/*Description -> left-botton*/
+.left-botton{
+    border-radius: 5px;
+}
+.left-botton header {
+    color: white;
+    text-align: center;
+    
+}
+.left-botton main{
+    color: white;
+    text-align: center;
+    margin: auto;
+    width: 75%;
+
+}
+.left-botton:hover{
+    box-shadow: 0 1px 5px rgba(100, 100, 100, 0.5);
+}
+/*---------------------*/
+
+/*right side*/
+.right{
+    border-radius: 5px;
+}
+.info{
+    margin: 10px 10px 5px ;
+    color: white;
+    font-size: 100%;
+}
+
+.weakness{
+    margin: 0px 10px 5px ;
+    font-size: 75%;
+
+}
+.weakness{
+    width: 94%;
+    height: 150px;
+    margin: 5px auto 0 auto ;
+    
+}
+#esq{
+    float:left;
+    width: 35%;
+    list-style-type:none;
+}
+#esq li{
+    color: white;
+    padding-top: 5px;
+}
+#dir{
+    float: left;
+    width: 35%;
+    list-style-type:none;
+    
+}
+#dir li{
+    color: white;
+    padding-top: 5px;
+}
+.right:hover{
+    box-shadow: 0 1px 5px rgba(100, 100, 100, 0.5);
+}
+/*----------------------*/

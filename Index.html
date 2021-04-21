@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monter Hunter: Big Monters INFO</title>
+    <link rel="stylesheet" href="CSS/PageStyle.css" />
+    <link rel="stylesheet" href="CSS/Monster_Container.css" />
+    <script type="text/javascript" src="Js/LoadMonsters.js" async></script>
+    <script type="text/javascript" src="Js/SwitchMonsterType.js"></script>
+   
+  </head>
+  <body>
+    
+
+    <div class="MHW-Capa">
+      <img src="BackGrounds/MHW-Capa.png" />
+    </div>
+
+    <label class="bg-titles">
+      <img id="left_arrow" onclick="switch_btn()" src="Images/icon_arrow.png" />
+      <img id="right_arrow" onclick="switch_btn()" src="Images/icon_arrow.png"/>
+      <h2 id="Title">SMALL MONSTERS</h2>
+      <input type="checkbox" id="check" />
+    </label>
+
+    <div id="LoadScreen">
+      <img src="Images/Load_Screen.gif" />
+    </div>
+
+    <div id="all_small_monsters" class="all-monsters"></div>
+    <div id="all_large_monsters" class="all-monsters"></div>
+  </body>
+</html>
