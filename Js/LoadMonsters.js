@@ -1,7 +1,10 @@
-const all_small_monsters = document.getElementById('all_small_monsters');
+
+const all_small_monsters =  document.getElementById('all_small_monsters');
 const all_large_monsters =  document.getElementById('all_large_monsters');
 const monster_qnt = 60;     
 var aux = 0;
+var NamesParam = [];
+
 
 //the function will activate by the amount of monster
 const fetchMonsters = async () => {
@@ -12,12 +15,16 @@ const fetchMonsters = async () => {
     }
 }
 
-var check_btn;
+
 const getMonster = async id =>{
     const url = `https://mhw-db.com/monsters/${id}`;//save url with a parameter(id)
     const res = await fetch(url);//wait for the request
     const monster = await res.json();//get the promise returned by 'res' and passes to json
     console.log(monster);
+    
+    const name = monster.name;
+    NamesParam.push(name);
+    
 
     if(monster.name != undefined){
         
@@ -68,6 +75,7 @@ function smallmonster_box(monster){
         document.getElementById("LoadScreen").style.opacity = '0';
         setTimeout(function(){ document.getElementById("LoadScreen").style.display = 'none'; }, 1000);     
     }
+    
 }
 
 //same as small monster box function
@@ -75,7 +83,7 @@ function largemonster_box(monster){
     const monsterEl = document.createElement('a');//const que gera div
     monsterEl.classList.add('monster');//insere classe monster à div'
     monsterEl.setAttribute('href', "MonsterInfo.html?id="+ `${monster.id}` + "&name=" + `${monster.name}`);
-    monster_Image = monster.name.replace("'",' ');
+    const monster_Image = monster.name.replace("'",' ');
 
     const monsterInnerHTML = `
         <div class="img-container">
@@ -88,30 +96,25 @@ function largemonster_box(monster){
     
     all_large_monsters.appendChild(monsterEl);
 
-    const name = monster.name;
 
     //function who passes the load screen to the second tab about the large monsters
-    check_btn = function check_btn(){
-        
-        if(name != 'Zinogre'){
-            document.querySelector("body").style.overflow = 'hidden';
-            document.getElementById("LoadScreen").style.opacity = '100%';
-            setTimeout(function(){ document.getElementById("LoadScreen").style.display = 'flex'; }); 
+    var newload = document.getElementById("NewLoad");
+    if(newload){
+    //starts the loadscreen when the right_arrow is pressed
+        document.querySelector("body").style.overflow = 'hidden';
+        document.getElementById("NewLoad").style.opacity = '100%';
+        setTimeout(function(){ document.getElementById("NewLoad").style.display = 'flex'; }); 
+    //When last monster is loaded the loadscreen finish
+        if(monster.name == 'Zinogre'){
+            document.querySelector("body").style.overflow = 'auto';
+            document.getElementById("NewLoad").style.opacity = '0';
+            setTimeout(function(){ document.getElementById("NewLoad").style.display = 'none'; }, 1000); 
         }
+        
+        
     }
     
-    if(name == 'Zinogre'){
-        
-        document.querySelector("body").style.overflow = 'auto';
-        document.getElementById("LoadScreen").style.opacity = '0';
-        setTimeout(function(){ document.getElementById("LoadScreen").style.display = 'none'; }, 1000);    
-    }
     
 }
 
-
         
-
- 
-
-

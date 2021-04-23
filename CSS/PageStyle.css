@@ -77,6 +77,24 @@ body {
 	height: 120px;
 
 }
+#NewLoad{
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(82, 73, 73, 0.815);
+	transition: 1s ease-in-out;
+}
+
+#NewLoad img{
+	width: 256px; 
+	height: 120px;
+
+}
 
 
 
