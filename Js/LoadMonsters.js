@@ -20,10 +20,11 @@ const getMonster = async id =>{
     const url = `https://mhw-db.com/monsters/${id}`;//save url with a parameter(id)
     const res = await fetch(url);//wait for the request
     const monster = await res.json();//get the promise returned by 'res' and passes to json
-    console.log(monster);
+    //console.log(monster);
     
     const name = monster.name;
     NamesParam.push(name);
+    
     
 
     if(monster.name != undefined){
@@ -34,7 +35,11 @@ const getMonster = async id =>{
 
         else{largemonster_box(monster)}
         
-    }   
+    } if(NamesParam.length == 60){
+        console.log(NamesParam);
+        return NamesParam;
+        
+    }  
 }
 
 fetchMonsters();
@@ -53,6 +58,7 @@ function smallmonster_box(monster){
 
     const monsterInnerHTML = `
         <div class="img-container" >
+            
             <img src='Icons/Monster-Icons/${monster.name}.png' width="100px" height="80px">  
             </div>
             
@@ -98,7 +104,7 @@ function largemonster_box(monster){
 
 
     //function who passes the load screen to the second tab about the large monsters
-    var newload = document.getElementById("NewLoad");
+    let newload = document.getElementById("NewLoad");
     if(newload){
     //starts the loadscreen when the right_arrow is pressed
         document.querySelector("body").style.overflow = 'hidden';

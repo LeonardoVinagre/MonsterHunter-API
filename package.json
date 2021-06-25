@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/LeonardoVinagre/API-MonsterHunter#readme",
   "dependencies": {
-    "puppeteer": "^8.0.0"
+    "puppeteer": "^8.0.0",
+    "xmlhttprequest": "^1.8.0"
   }
 }

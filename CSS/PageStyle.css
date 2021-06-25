@@ -4,7 +4,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-family: 'arial';
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	margin: 0;
 	box-sizing: border-box;
 }
@@ -47,16 +47,15 @@ body {
 	position:absolute;
 	margin-left: 180px;
 	margin-top: 13px;
-	
+	cursor: pointer;
 }
 #left_arrow{
 	width: 30px;
-	height: auto;
+
 	position:absolute;
 	margin-left: -210px;
 	margin-top: 13px;
-	transform: rotateY(180deg);
-	
+	cursor: pointer;
 }
 
 #LoadScreen{
@@ -75,7 +74,7 @@ body {
 #LoadScreen img{
 	width: 256px; 
 	height: 120px;
-
+	
 }
 #NewLoad{
 	position: fixed;
@@ -88,12 +87,12 @@ body {
 	align-items: center;
 	background-color: rgba(82, 73, 73, 0.815);
 	transition: 1s ease-in-out;
+	
 }
 
 #NewLoad img{
 	width: 256px; 
 	height: 120px;
-
 }
 
 

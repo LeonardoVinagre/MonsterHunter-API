@@ -30,17 +30,15 @@
     text-align: center;
     letter-spacing: 0.10rem;
     box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
-    text-decoration: none;
+    text-decoration: none; 
+    overflow: hidden;
+    display: inline-block;
+
 }
 
-.monster .img-container{
+.img-container{
     text-align: center;
     padding-top: 10px;
-
-     
+	 
 }
 
-.monster:hover{
-    border:  solid #938D8E 2px;
-    
-}

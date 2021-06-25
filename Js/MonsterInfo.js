@@ -1,18 +1,19 @@
 //Imported Functions
 import {ToUpper, ConcatenatesElements}  from './UpperCase.js'       ; // UpperCase Function
 import * as GetMonsterParam             from './GetMonsterParam.js' ; // Get the monster page link
+
 //-----------------------------------------------------------------------------
 
 const Selected_Monster_Info = document.getElementById('Selected_Monster_Info');
 
 
- 
+
 
 const urlId = GetMonsterParam.urlId;
 
 const getMonster = async id =>{
-    const url     = `https://mhw-db.com/monsters/${id}`;//saves url as a parameter
-    const res     = await fetch(url);//wait the request of url and return as a promisse
+    const url     = `https://mhw-db.com/monsters/${id}`;//saves url as parameter
+    const res     = await fetch(url);//wait the request of url and return as promisse
     const monster = await res.json();//convert the promisse to json
     console.log(monster);
     Info_Gen(monster);
@@ -57,6 +58,7 @@ function Info_Gen(monster){
         <div class="left-botton">
             <header>
                 <h3>Description</h3>
+                <hr width="75%">
             </header>
             <main>
                 <p>${monster.description}</p>
@@ -96,14 +98,14 @@ function creat_weak(monster, weak_len){
             new_li = document.createElement("li");
             new_li.setAttribute('id', 'weak' + i);
             ul_esq.appendChild(new_li);
-            img_innerHTML = `<img width="20px" src="Icons/Elements/${monster.weaknesses[i].element}.PNG">`;
+            img_innerHTML = `<img width="20px" class="weak-effect" src="Icons/Elements/${monster.weaknesses[i].element}.PNG">`;
             
         }
         else{
             new_li = document.createElement("li");
             new_li.setAttribute('id', 'weak' + i);
             ul_dir.appendChild(new_li);
-            img_innerHTML = `<img width="20px" src="Icons/Elements/${monster.weaknesses[i].element}.PNG">`;
+            img_innerHTML = `<img width="20px" class="weak-effect" src="Icons/Elements/${monster.weaknesses[i].element}.PNG">`;
 
         }
         
